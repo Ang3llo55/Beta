@@ -30,7 +30,7 @@ $conn =pg_connect($data_connection);
     else {echo "Connection successfully";
     }
     
-    
+
     //cerrar la conexion
 
     //pg_close($conn);
