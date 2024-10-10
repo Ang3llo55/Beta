@@ -33,6 +33,6 @@ $conn =pg_connect($data_connection);
     
     //cerrar la conexion
 
-    pg_close($conn);
+    //pg_close($conn);
 
 ?>
