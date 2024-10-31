@@ -1,4 +1,32 @@
 <?php
+    function save_data_supabase($email, $passwd){
+        //Supabase database configuration
+        $SUPABASE_URL = 'https://ylqvlnwghtqljivoswsb.supabase.co';
+        $SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlscXZsbndnaHRxbGppdm9zd3NiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAzODg2OTksImV4cCI6MjA0NTk2NDY5OX0.nturyTBExOMbHo12740LDch6_NPaTI9qS_yutyLoO7Y';
+        $url = "$SUPABASE_URL/rest/v1/users/";
+        $data = [
+        'email' => $email,
+        'password' => $passwd
+        ];
+        $options = [
+            'http' => [
+                'header' => "Content-Type: application/
+                json\r\nAuthorization: Bearer $SUPABASE_KEY",
+                'method' => 'POST',
+                'content' => json_encode($data),
+            ],
+        ];
+        $context = stream_context_create($options);
+        $response = file_get_contents($url, false. $context);
+        $response_data = json_decode($response, true);
+
+        if($response === false) {
+            echo "Error: Unable to save data to Supabase";
+            exist;
+         }
+         echo "User has been created." . json_encode($response_data);
+         
+}
     //DB connection
     require('../../config/db_connection.php');
     //Get data from register form
