@@ -62,7 +62,6 @@
         echo "Registration failed!";
     }
     pg_close($conn);
-    
     /*echo "Email: " . $email;
     echo "<br>Password: " . $pass;
     echo "<br>Enc. Password: " . $enc_pass;
