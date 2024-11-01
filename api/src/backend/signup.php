@@ -20,7 +20,7 @@
             ],
         ];
         $context = stream_context_create($options);
-        $response = file_get_contents($url, false. $context);
+        $response = file_get_contents($url, true, $context);
         // $response_data = json_decode($response, true);
 
         if($response === false) {
