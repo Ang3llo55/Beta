@@ -5,8 +5,8 @@
         $SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlscXZsbndnaHRxbGppdm9zd3NiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAzODg2OTksImV4cCI6MjA0NTk2NDY5OX0.nturyTBExOMbHo12740LDch6_NPaTI9qS_yutyLoO7Y";
         $url = "$SUPABASE_URL/rest/v1/users";
         $data = [
-            'email' => $email,
-            'password' => $passwd
+            "email" => $email,
+            "password" => $passwd
         ];
         $options = [
             'http' => [
