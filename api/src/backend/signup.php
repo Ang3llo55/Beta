@@ -25,7 +25,7 @@
 
         if($response === false) {
             echo "Error: Unable to save data to Supabase";
-            exist;
+            exit;
          }
          echo "User has been created." . json_encode($response_data);
          
@@ -55,7 +55,7 @@
 
     if ($result) {
         //echo "<br>Registration successful!";
-        save_data_supabase($email, $passwd);
+        save_data_supabase($email, $enc_pass);
         echo "<script>alert('Registration successful!')</script>";
         header('refresh:0;url=http://127.0.0.1/Beta/api/src/login_form.html');
     } else {
