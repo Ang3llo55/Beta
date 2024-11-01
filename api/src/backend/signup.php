@@ -1,8 +1,8 @@
 <?php
     function save_data_supabase($email, $passwd){
         //Supabase database configuration
-        $SUPABASE_URL = 'https://ylqvlnwghtqljivoswsb.supabase.co';
-        $SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlscXZsbndnaHRxbGppdm9zd3NiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAzODg2OTksImV4cCI6MjA0NTk2NDY5OX0.nturyTBExOMbHo12740LDch6_NPaTI9qS_yutyLoO7Y';
+        $SUPABASE_URL = "https://ylqvlnwghtqljivoswsb.supabase.co";
+        $SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlscXZsbndnaHRxbGppdm9zd3NiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzAzODg2OTksImV4cCI6MjA0NTk2NDY5OX0.nturyTBExOMbHo12740LDch6_NPaTI9qS_yutyLoO7Y";
         $url = "$SUPABASE_URL/rest/v1/users";
         $data = [
             'email' => $email,
