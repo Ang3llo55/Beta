@@ -27,7 +27,7 @@
             echo "Error: Unable to save data to Supabase";
             exit;
          }
-         echo "User has been created." . json_encode($response_data);
+         echo "User has been created."; //. json_encode($response_data);
          
 }
     //DB connection
